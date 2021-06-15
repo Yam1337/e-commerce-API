@@ -1,0 +1,37 @@
+[
+  {
+    "id": 2,
+    "name": "Sunglasses",
+    "image": "https://images.ctfassets.net/u4vv676b8z52/26dfk0V6xSBoHF2B5riYqO/e0edc2fff2a8208a2a941df0c61e7370/Hero_Article_Problem-Woman-compressor.jpg?fm=jpg&q=80",
+    "created_at": "2021-05-28T16:14:42.019Z",
+    "updated_at": "2021-05-28T16:14:42.030Z"
+  },
+  {
+    "id": 3,
+    "name": "T-Shirts",
+    "image": "https://cdn.shopify.com/s/files/1/0984/4522/products/AccentureT-ShirtForMen_2_large.jpg",
+    "created_at": "2021-05-28T16:14:55.560Z",
+    "updated_at": "2021-05-28T16:14:55.596Z"
+  },
+  {
+    "id": 4,
+    "name": "Handbags",
+    "image": "https://images.unsplash.com/photo-1525103504173-8dc1582c7430?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80",
+    "created_at": "2021-05-28T16:16:49.370Z",
+    "updated_at": "2021-05-28T16:16:49.382Z"
+  },
+  {
+    "id": 5,
+    "name": "Hats",
+    "image": "https://images.unsplash.com/photo-1588021831509-0094aa971b7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80",
+    "created_at": "2021-05-28T16:18:27.716Z",
+    "updated_at": "2021-05-28T16:18:27.748Z"
+  },
+  {
+    "id": 1,
+    "name": "Dresses",
+    "image": "https://images.unsplash.com/photo-1586693231040-e89840e7d805?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80",
+    "created_at": "2021-05-26T18:25:19.720Z",
+    "updated_at": "2021-05-28T17:01:56.526Z"
+  }
+]
