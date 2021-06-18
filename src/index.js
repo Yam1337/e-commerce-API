@@ -1,6 +1,9 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 80;
+
+app.use(bodyParser());
 
 const products = require("./products.json");
 const categories = require("./categories.json");
@@ -32,6 +35,8 @@ app.get("/orders", (req, res) => {
 
 app.post("/orders", (req, res) => {
   console.log(req.body);
+  orders.push(req.body);
+  res.send(req.body, orders);
 });
 
 app.get("/orders/:id", (req, res) => {
