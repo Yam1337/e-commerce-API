@@ -30,6 +30,10 @@ app.get("/orders", (req, res) => {
   res.json(orders);
 });
 
+app.post("/orders", (req, res) => {
+  console.log(req.body);
+});
+
 app.get("/orders/:id", (req, res) => {
   const id = Number(req.params.id);
   const found = orders.find((item) => item.id === id);
@@ -37,7 +41,7 @@ app.get("/orders/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server started at http://localhost:${port}`);
+  console.log(`App listening at http://localhost:${port}`);
 });
 
 console.log("Yes, this is dog");
