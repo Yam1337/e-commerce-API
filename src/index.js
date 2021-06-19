@@ -12,7 +12,12 @@ const categories = require("./categories.json");
 const orders = require("./orders.json");
 
 app.get("/products", (req, res) => {
-  res.json(products);
+  const limit = req.query.limit;
+  // const sort = req.query.sort;
+
+  const limitedProducts = products.slice(0, limit);
+
+  res.json(limitedProducts);
 });
 
 app.get("/products/:id", (req, res) => {
