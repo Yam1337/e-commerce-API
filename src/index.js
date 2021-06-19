@@ -1,9 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 80;
 
 app.use(bodyParser());
+app.use(cors());
 
 const products = require("./products.json");
 const categories = require("./categories.json");
