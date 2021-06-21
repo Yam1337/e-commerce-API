@@ -71,6 +71,17 @@ app.get("/orders", (req, res) => {
   res.json(orders);
 });
 
+app.get("/orders/count", (req, res) => {
+  const limit = req.query._limit;
+  if (limit !== undefined) {
+    const limitedOrders = orders.slice(0, Number(limit));
+    res.json(limitedOrders);
+    return;
+  }
+  const itemsCount = orders.filter((item) => item.products.id !== 0).length;
+  res.json(itemsCount);
+});
+
 app.post("/orders", (req, res) => {
   console.log(req.body);
   orders.push(req.body);
