@@ -12,10 +12,13 @@ const categories = require("./categories.json");
 const orders = require("./orders.json");
 
 app.get("/products", (req, res) => {
-  const limit = Number(req.query._limit);
-  const limitedProducts = products.slice(0, limit);
-
-  res.json(limitedProducts);
+  const limit = req.query._limit;
+  if (limit !== undefined) {
+    const limitedProducts = products.slice(0, Number(limit));
+    res.json(limitedProducts);
+    return;
+  }
+  res.json(products);
 });
 
 app.get("/products/count", (req, res) => {
