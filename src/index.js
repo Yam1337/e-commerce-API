@@ -12,11 +12,22 @@ const categories = require("./categories.json");
 const orders = require("./orders.json");
 
 app.get("/products", (req, res) => {
-  const limit = req.query._limit;
-  // const sort = req.query._sort;
+  const limit = Number(req.query._limit);
   const limitedProducts = products.slice(0, limit);
 
   res.json(limitedProducts);
+});
+
+app.get("/products/count", (req, res) => {
+  const countId = Number(req.query._countId);
+  if (countId !== undefined) {
+    const itemsCount = products.filter((item) => item.category.id === countId)
+      .length;
+    res.json(itemsCount);
+    return;
+  }
+  const itemsCount = products.filter((item) => item.category.id > 0).length;
+  res.json(itemsCount);
 });
 
 app.get("/products/:id", (req, res) => {
@@ -26,6 +37,19 @@ app.get("/products/:id", (req, res) => {
 });
 
 app.get("/categories", (req, res) => {
+  const id = req.query._id;
+  const limit = req.query._limit;
+  if (id !== undefined && limit !== undefined) {
+    const found = products.filter((item) => item.category.id === Number(id));
+    const limitedProducts = found.slice(0, Number(limit));
+    res.json(limitedProducts);
+    return;
+  }
+  if (id !== undefined) {
+    const found = products.filter((item) => item.category.id === Number(id));
+    res.json(found);
+    return;
+  }
   res.json(categories);
 });
 
