@@ -10,6 +10,11 @@ app.use(cors());
 const products = require("./products.json");
 const categories = require("./categories.json");
 const orders = require("./orders.json");
+const mainMenu = require("./mainManu.json");
+
+app.get("/main-menu", (req, res) => {
+  res.json(mainMenu);
+});
 
 app.get("/products", (req, res) => {
   const limit = req.query._limit;
